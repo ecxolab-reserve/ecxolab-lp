@@ -12,7 +12,6 @@ import {
   Share2,
   User2,
 } from "lucide-react";
-import { engobe } from "./layout";
 
 export default function LandingPage() {
   return (
@@ -36,7 +35,7 @@ export default function LandingPage() {
         </div>
         <div className="mt-4">
           <h1
-            className={`${engobe.className} font-extrabold text-4xl -mt-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 via-pink-500 to-purple-500`}
+            className={`font-[var(--font-engobe-sans)] text-4xl -mt-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 via-pink-500 to-purple-500`}
           >
             <p className="leading-[4]">Unleashing Digital</p>{" "}
             <p className="-mt-12">Innovation</p>
