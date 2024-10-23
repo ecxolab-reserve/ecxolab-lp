@@ -3,6 +3,7 @@ import Image from "next/image";
 import Isologo from "@/assets/logos/isologo-colorful.svg";
 import Logo from "@/assets/logos/logo-colorful.svg";
 import { Button } from "@/components/ui/button";
+import { engobe } from "@/fonts";
 import {
   Bookmark,
   Braces,
@@ -15,10 +16,10 @@ import {
 
 export default function LandingPage() {
   return (
-    <main className="container max-w-[1200px] mx-auto">
-      <header className="flex w-full justify-between items-center p-8 sm:px-0 sm:py-8">
+    <main className="container max-w-[1200px] mx-auto px-8">
+      <header className="flex w-full justify-between items-center py-8">
         <Image src={Logo} width={160} alt="Logo ECXOLAB" />
-        <div>
+        <div className="hidden md:inline">
           <Button>About</Button>
           <Button>Projects</Button>
           <Button variant={"gradient"} className="group">
@@ -33,21 +34,20 @@ export default function LandingPage() {
           <Image src={Isologo} width={14} alt="Isologo ECXOLAB" />
           <span>Your challenges, our solutions.</span>
         </div>
-        <div className="mt-4">
+        <div>
           <h1
-            className={`font-[var(--font-engobe-sans)] text-4xl -mt-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 via-pink-500 to-purple-500`}
+            className={`${engobe.className} font-bold text-4xl pt-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 via-pink-500 to-purple-500`}
           >
-            <p className="leading-[4]">Unleashing Digital</p>{" "}
-            <p className="-mt-12">Innovation</p>
+            Unleashing Digital <br /> Innovation
           </h1>
           <p className="text-center text-gray-600">
             At Ecxolab, we blend creativity with technology to craft digital{" "}
-            <br />
-            experiences that resonate. Explore our work and see how <br /> we
-            bring ideas to life.
+            <br className="hidden md:inline" />
+            experiences that resonate. Explore our work and see how{" "}
+            <br className="hidden md:inline" /> we bring ideas to life.
           </p>
         </div>
-        <div className="space-x-4">
+        <div className="flex flex-col md:flex-row gap-4 items-center">
           <Button variant={"gradient"} className="group">
             Contact us
             <ChevronRight className="group-hover:translate-x-0.5 transition" />
@@ -60,8 +60,8 @@ export default function LandingPage() {
       </section>
       <section className="py-16">
         <h2 className="text-4xl font-bold mb-6">Highlights</h2>
-        <div className="grid grid-cols-2 gap-4">
-          <div className="flex rounded-[2rem] bg-yellow-500/5 text-yellow-500 flex-col p-6 gap-32 font-bold">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="flex rounded-[2rem] bg-yellow-500/5 text-yellow-500 flex-col p-6 gap-16 md:gap-32 font-bold">
             <div className="flex gap-2 bg-gray-900 w-fit px-4 py-2 rounded-full">
               <Rocket />
               <h3>Optimized Web Applications</h3>
@@ -71,7 +71,7 @@ export default function LandingPage() {
             </p>
           </div>
 
-          <div className="flex rounded-[2rem] bg-purple-500/5 text-purple-500 flex-col p-6 gap-32 font-bold">
+          <div className="flex rounded-[2rem] bg-purple-500/5 text-purple-500 flex-col p-6 gap-16 md:gap-32 font-bold">
             <div className="flex gap-2 bg-gray-900 w-fit px-4 py-2 rounded-full">
               <User2 />
               <h3>User-Centered Design</h3>
@@ -81,7 +81,7 @@ export default function LandingPage() {
               technology.
             </p>
           </div>
-          <div className="flex rounded-[2rem] bg-pink-500/5 text-pink-500 flex-col p-6 gap-32 font-bold">
+          <div className="flex rounded-[2rem] bg-pink-500/5 text-pink-500 flex-col p-6 gap-16 md:gap-32 font-bold">
             <div className="flex gap-2 bg-gray-900 w-fit px-4 py-2 rounded-full">
               <PenTool />
               <h3> Design-Driven Innovation</h3>
@@ -90,7 +90,7 @@ export default function LandingPage() {
               Creative design meets technology to deliver real results.
             </p>
           </div>
-          <div className="flex rounded-[2rem] bg-lime-500/5 text-lime-500 flex-col p-6 gap-32 font-bold">
+          <div className="flex rounded-[2rem] bg-lime-500/5 text-lime-500 flex-col p-6 gap-16 md:gap-32 font-bold">
             <div className="flex gap-2 bg-gray-900 w-fit px-4 py-2 rounded-full">
               <Braces />
               <h3>Expertise in Decentralized Applications</h3>
@@ -103,7 +103,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="py-16 flex gap-32">
+      <section className="py-16 flex flex-col md:flex-row gap-16 md:gap-32">
         <div className="w-full flex flex-col justify-between">
           <h2 className="text-4xl font-bold mb-6">About us</h2>
           <p>
@@ -114,7 +114,7 @@ export default function LandingPage() {
             and technology seamlessly merge to create impactful results.
           </p>
         </div>
-        <div className="w-full grid grid-cols-2 gap-4">
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="bg-gray-950/25 rounded-[2rem] px-6 py-8">
             <h3 className="text-gray-600 font-black mb-8">
               Continuos Projects
@@ -142,8 +142,8 @@ export default function LandingPage() {
 
       <section className="py-16">
         <h2 className="text-4xl font-bold mb-6">Connect with us</h2>
-        <div className="grid grid-cols-3 gap-4">
-          <div className="flex rounded-[2rem] bg-red-500/5 text-red-500 flex-col p-6 gap-32 font-bold">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="flex rounded-[2rem] bg-red-500/5 text-red-500 flex-col p-6 gap-16 md:gap-32 font-bold">
             <div className="flex gap-2 bg-gray-900 w-fit px-4 py-2 rounded-full">
               <Bookmark />
               <h3>Blog</h3>
@@ -153,7 +153,7 @@ export default function LandingPage() {
             </p>
           </div>
 
-          <div className="flex rounded-[2rem] bg-sky-500/5 text-sky-500 flex-col justify-between p-6 gap-32 font-bold col-span-2">
+          <div className="flex rounded-[2rem] bg-sky-500/5 text-sky-500 flex-col justify-between p-6 gap-16 md:gap-32 font-bold md:col-span-2">
             <div className="flex gap-2 bg-gray-900 w-fit px-4 py-2 rounded-full">
               <Share2 />
               <h3>Stay connected</h3>
