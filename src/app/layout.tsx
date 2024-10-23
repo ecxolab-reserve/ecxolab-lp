@@ -3,25 +3,28 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: 'ECXOLAB',
-  description: 'Your challengers, our solutions.',
+  title: "ECXOLAB",
+  description:
+    "ECXOLAB is a software development company focused on innovative, user-friendly solutions with an emphasis on design and scalability",
   openGraph: {
-    title: 'ECXOLAB',
-    description: 'Your challengers, our solutions.',
-    url: 'https://www.ecxolab.com/',
+    title: "ECXOLAB: Your challengers, our solutions.",
+    description:
+      "ECXOLAB is a software development company focused on innovative, user-friendly solutions with an emphasis on design and scalability.",
+    url: "https://www.ecxolab.com/",
     images: [
       {
-        url: 'https://www.ecxolab.com/meta-image.jpg',
-        alt: 'Imagem representando nossa empresa'
-      }
-    ]
+        url: "https://www.ecxolab.com/meta-image.jpg",
+        alt: "ECXOLAB Logo",
+      },
+    ],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'ECXOLAB',
-    description: 'Your challengers, our solutions.',
-    images: ['https://www.ecxolab.com/meta-image.jpg']
-  }
+    card: "summary_large_image",
+    title: "ECXOLAB: Your challengers, our solutions.",
+    description:
+      "ECXOLAB is a software development company focused on innovative, user-friendly solutions with an emphasis on design and scalability.",
+    images: ["https://www.ecxolab.com/meta-image.jpg"],
+  },
 };
 
 export default function RootLayout({
